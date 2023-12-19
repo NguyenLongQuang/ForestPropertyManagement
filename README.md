@@ -1,3 +1,4 @@
-1. Setup:
-  git init
-  git pull https://github.com/NguyenLongQuang/ForestPropertyManagement.git
+# Setup:
+
+<br/>`git init`
+<br/>`git pull https://github.com/NguyenLongQuang/ForestPropertyManagement.git`
