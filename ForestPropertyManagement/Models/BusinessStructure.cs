@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Category
+    internal class BusinessStructure : Description<Facility>
     {
-        public int Id { get; set; }
-        public string FormerName { get; set; }
     }
 }

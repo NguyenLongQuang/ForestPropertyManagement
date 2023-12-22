@@ -10,9 +10,6 @@ namespace Models
     {
         public int Id { get; set; }
         public string FormerName { get; set; }
-        //public DateTime Established;
-        //public float Longtitute { get; set; }
-        //public float Latitute { get; set; }
 
     }
     internal class FacilityList : List<Facility>

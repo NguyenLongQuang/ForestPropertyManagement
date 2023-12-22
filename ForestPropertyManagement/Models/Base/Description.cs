@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ForestPropertyManagement.Models
+namespace Models.Base
 {
-    internal class Description
+    internal class Description<T> where T : new()
     {
         public int Id { get; set; }
+        public int ReferenceId { get; set; }
         public string FormerName { get; set; }
     }
 }

@@ -56,10 +56,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controllers\FacilityController.cs" />
+    <Compile Include="Models\Base\Description.cs" />
+    <Compile Include="Models\Base\Report.cs" />
+    <Compile Include="Models\BusinessStructure.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Description.cs" />
+    <Compile Include="Models\District.cs" />
     <Compile Include="Models\Facility.cs" />
+    <Compile Include="Models\FacilityReport.cs" />
     <Compile Include="Models\Offering.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductionMethod.cs" />
+    <Compile Include="Models\ProductReport.cs" />
     <Compile Include="ViewModels\Base.cs" />
     <Compile Include="ViewModels\FacilityViewModel.cs" />
     <Compile Include="Views\BaseView.cs" />

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Models;
+using Models.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Category
+    internal class District : Description<Facility>
     {
-        public int Id { get; set; }
-        public string FormerName { get; set; }
     }
 }
