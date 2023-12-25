@@ -26,8 +26,8 @@ namespace ForestPropertyManagement.ViewModels
         public T Selected { get; set; }
         public int SelectedIndex
         {
-            get => all.IndexOf(Selected);
-            set => Selected = all[value];
+            get => all == null ? -1 : all.IndexOf(Selected);
+            set => Selected = all == null ? new T() : all[value];
         }
 
         public event EventHandler OnChanged;

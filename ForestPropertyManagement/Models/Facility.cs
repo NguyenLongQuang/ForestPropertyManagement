@@ -10,6 +10,9 @@ namespace Models
     {
         public int Id { get; set; }
         public string FormerName { get; set; }
+        public int DistrictId { get; set; }
+        public int BusinessStructureId { get; set; }
+        public int ProductionMethodId { get; set; }
 
     }
     internal class FacilityList : List<Facility>

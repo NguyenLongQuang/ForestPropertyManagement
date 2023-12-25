@@ -9,7 +9,7 @@ namespace Models
     internal class Offering
     {
         public int FacilityId { get; set; }
-        public int CatagoryId { get; set; }
+        public int CategoryId { get; set; }
 
     }
 }

@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\FacilityAddressController.cs" />
     <Compile Include="Controllers\FacilityController.cs" />
     <Compile Include="Models\Base\Description.cs" />
     <Compile Include="Models\Base\Report.cs" />
@@ -62,16 +64,31 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Facility.cs" />
+    <Compile Include="Models\FacilityAddress.cs" />
     <Compile Include="Models\FacilityReport.cs" />
     <Compile Include="Models\Offering.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductionMethod.cs" />
     <Compile Include="Models\ProductReport.cs" />
     <Compile Include="ViewModels\Base.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\FacilityAddressViewModel.cs" />
     <Compile Include="ViewModels\FacilityViewModel.cs" />
     <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\Category\All.xaml.cs">
+      <DependentUpon>All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FacilityAddress\All.xaml.cs">
+      <DependentUpon>All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FacilityAddress\SelectedGroup.xaml.cs">
+      <DependentUpon>SelectedGroup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Facility\All.xaml.cs">
       <DependentUpon>All.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Facility\SelectedGroup.xaml.cs">
+      <DependentUpon>SelectedGroup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainContent.cs" />
     <Page Include="MainWindow.xaml">
@@ -86,7 +103,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Category\All.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FacilityAddress\All.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FacilityAddress\SelectedGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Facility\All.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Facility\SelectedGroup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

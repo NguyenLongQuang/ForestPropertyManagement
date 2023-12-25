@@ -30,7 +30,7 @@ namespace ForestPropertyManagement.Views.Facility
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Model.Remove();
+            
         }
 
         private void Selected(object sender, RoutedEventArgs e)

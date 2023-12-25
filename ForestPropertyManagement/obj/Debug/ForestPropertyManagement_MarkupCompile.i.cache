@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\App.xaml
-21276589723
+6796607024
 
-25281749615
+341796430573
 13-1310406943
-MainWindow.xaml;Views\Facility\All.xaml;
+MainWindow.xaml;Views\Category\All.xaml;Views\FacilityAddress\All.xaml;Views\FacilityAddress\SelectedGroup.xaml;Views\Facility\All.xaml;Views\Facility\SelectedGroup.xaml;
 
-False
+True
 

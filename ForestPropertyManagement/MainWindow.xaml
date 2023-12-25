@@ -36,7 +36,7 @@
                         >
 
                 <Button x:Name="Facility" Margin="2" Padding="10 5">Co so san xuat</Button>
-                <!--<Button x:Name="Group" Margin="2" Padding="10 5" Click="Group_Click">Nhom</Button>-->
+                <Button x:Name="Category" Margin="2" Padding="10 5">Danh muc san xuat</Button>
             </StackPanel>
         </Grid>
         <Border x:Name="MainContent" Grid.Row="1">

@@ -11,4 +11,11 @@ namespace Models
         public int Id { get; set; }
         public string FormerName { get; set; }
     }
+    internal class CategoryList : List<Facility>
+    {
+        public CategoryList()
+        {
+            this.AddRange(new Provider().Select<Facility>("SELECT * FROM Category"));
+        }
+    }
 }

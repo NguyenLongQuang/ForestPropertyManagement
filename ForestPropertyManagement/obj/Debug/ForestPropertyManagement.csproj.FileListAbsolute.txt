@@ -34,3 +34,11 @@ E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\ForestPrope
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\ForestPropertyManagement.csproj.CoreCompileInputs.cache
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\ForestPropertyManagement.exe
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\ForestPropertyManagement.pdb
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Category\All.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Category\All.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\All.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\All.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\SelectedGroup.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\SelectedGroup.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\SelectedGroup.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\SelectedGroup.baml
