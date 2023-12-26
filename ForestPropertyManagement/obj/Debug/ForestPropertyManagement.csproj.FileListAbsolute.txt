@@ -42,3 +42,5 @@ E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facil
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\SelectedGroup.baml
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\SelectedGroup.g.cs
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\SelectedGroup.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityReport\SelectedGroup.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityReport\SelectedGroup.baml

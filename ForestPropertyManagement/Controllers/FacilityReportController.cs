@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ForestPropertyManagement.Controllers
 {
-    internal class FacilityController : ControllerBase
+    internal class FacilityReportController : ControllerBase
     {
         public object Index()
         {
             return View();
         }
-        public object SelectedGroupIndex(int CategoryId)
+        public object SelectedGroupIndex(int CategoryId, int Month, int Year)
         {
-            return View(CategoryId);
+            return View(CategoryId, Month, Year);
         }
     }
 }

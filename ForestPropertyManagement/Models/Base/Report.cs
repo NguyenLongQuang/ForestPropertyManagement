@@ -13,5 +13,12 @@ namespace Models.Base
         public int Number { get; set; }
         public int RecordMonth { get; set; }
         public int RecordYear { get; set; }
+        public string Date
+        {
+            get
+            {
+                return $"{RecordMonth}/{RecordYear}";
+            }
+        }
     }
 }

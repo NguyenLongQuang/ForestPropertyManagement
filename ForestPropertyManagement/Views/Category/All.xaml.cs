@@ -28,19 +28,34 @@ namespace ForestPropertyManagement.Views.Category
         private void FacilityStats_Click(object sender, RoutedEventArgs e)
         {
             if (Model.SelectedIndex >= 0)
-            {
-                ViewModels.FacilityViewModel.SelectedGroupId = Model.List[Model.SelectedIndex].Id;
-                MVC.Execute("Facility/SelectedGroupIndex");
-            }
+                MVC.Execute("Facility/SelectedGroupIndex", Model.List[Model.SelectedIndex].Id);
         }
         private void FacilityMap_Click(object sender, RoutedEventArgs e)
         {
             if (Model.SelectedIndex >= 0)
-            {
-                ViewModels.FacilityAddressViewModel.SelectedGroupId = Model.List[Model.SelectedIndex].Id;
-                MVC.Execute("FacilityAddress/SelectedGroupIndex");
-            }
+                MVC.Execute("FacilityAddress/SelectedGroupIndex", Model.List[Model.SelectedIndex].Id);
         }
+        private void FacilityReportMonth_Click(object sender, RoutedEventArgs e)
+        {
+            if (Model.SelectedIndex >= 0)
+                MVC.Execute("FacilityReport/SelectedGroupIndex", Model.List[Model.SelectedIndex].Id, 10, 2022);
+        }
+        //private void FacilityReportQuarter_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Model.SelectedIndex >= 0)
+        //    {
+        //        ViewModels.FacilityReportViewModel.SelectedGroupId = Model.List[Model.SelectedIndex].Id;
+        //        MVC.Execute("FacilityAddress/SelectedGroupIndex");
+        //    }
+        //}
+        //private void FacilityReportYear_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (Model.SelectedIndex >= 0)
+        //    {
+        //        ViewModels.FacilityReportViewModel.SelectedGroupId = Model.List[Model.SelectedIndex].Id;
+        //        MVC.Execute("FacilityAddress/SelectedGroupIndex");
+        //    }
+        //}
         private void Selected(object sender, RoutedEventArgs e)
         {
             if (Model != null)

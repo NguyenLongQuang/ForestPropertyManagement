@@ -12,9 +12,9 @@ namespace ForestPropertyManagement.Controllers
         {
             return View();
         }
-        public object SelectedGroupIndex()
+        public object SelectedGroupIndex(int categoryId)
         {
-            return View();
+            return View(categoryId);
         }
     }
 }

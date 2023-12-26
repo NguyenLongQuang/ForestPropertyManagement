@@ -37,16 +37,23 @@ namespace System
             return (T)Activator.CreateInstance(type);
         }
 
+        static public T CreateObject<T>(string typeName, params object[] parameters)
+        {
+            var type = Type.GetType($"{assembly}.{typeName}");
+            return (T)Activator.CreateInstance(type, parameters);
+        }
+
         static public ControllerBase GetController(string name) => CreateObject<ControllerBase>($"Controllers.{name}Controller");
         static public IView GetView(string controller, string action) => CreateObject<IView>($"Views.{controller}.{action}");
-
+        static public IView GetView(string controller, string action, params object[] parameters) => CreateObject<IView>($"Views.{controller}.{action}", parameters);
         static public void Execute(RequestContext context)
         {
             var ctr = GetController(context.Controller);
             var act = ctr.GetType().GetMethod(context.Action);
 
             ctr.Request = context;
-            var result = (ActionResult)act.Invoke(ctr, new object[] { });
+
+            var result = (ActionResult)act.Invoke(ctr, context.Params.Count == 0 ? new object[] { } : context.Params.ToArray());
             if (result != null)
             {
                 updateView(result);
@@ -80,6 +87,11 @@ namespace System
         public ActionResult View()
         {
             var view = MVC.GetView(Request.Controller, Request.Action);
+            return new ActionResult { View = view };
+        }
+        public ActionResult View(params object[] parameters)
+        {
+            var view = MVC.GetView(Request.Controller, Request.Action, parameters);
             return new ActionResult { View = view };
         }
     }

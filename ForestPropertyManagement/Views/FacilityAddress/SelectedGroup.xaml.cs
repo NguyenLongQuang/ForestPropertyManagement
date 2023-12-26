@@ -44,9 +44,11 @@ namespace ForestPropertyManagement.Views.FacilityAddress
 
     public class SelectedGroupIndex : BaseView<SelectedGroup>
     {
+        int CategoryId;
+        public SelectedGroupIndex(int Id) { CategoryId = Id; }
         protected override void RenderCore()
         {
-            var model = new ViewModels.FacilityAddressViewModel();
+            var model = new ViewModels.FacilityAddressViewModel { SelectedGroupId = CategoryId <= 0 ? 1 : CategoryId };
             Action bind = () => {
                 MainContent.DataContext = null;
                 MainContent.DataContext = model;

@@ -15,6 +15,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button Click="FacilityStats_Click">Thống kê cơ sở</Button>
                 <Button Click="FacilityMap_Click">Xem bản đồ cơ sở</Button>
+                <Button Click="FacilityReportMonth_Click">Thống kê cơ sở theo tháng</Button>
             </StackPanel>
             <ListView x:Name="ListView" ItemsSource="{Binding Path=List}"
                       SelectionMode="Single"

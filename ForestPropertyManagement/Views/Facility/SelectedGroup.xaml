@@ -20,7 +20,7 @@
                       SelectionChanged="Selected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Label Content="{Binding Path=FormerName}" />
+                        <Label Content="{Binding Path=FormerName}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

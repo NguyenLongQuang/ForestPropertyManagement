@@ -9,7 +9,16 @@ namespace ForestPropertyManagement.ViewModels
 {
     internal class FacilityViewModel : Base<Facility>
     {
-        public static int SelectedGroupId = 1;
+        int CategoryId;
+        public int SelectedGroupId
+        {
+            get => CategoryId;
+            set
+            {
+                CategoryId = value;
+                SelectedGroup = null;
+            }
+        }
         List<Facility> SelectedGroup;
         public List<Facility> SelectedGroupList
         {

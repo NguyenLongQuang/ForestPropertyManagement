@@ -15,22 +15,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ForestPropertyManagement.Views.Facility
+namespace ForestPropertyManagement.Views.FacilityReport
 {
     /// <summary>
     /// Interaction logic for All.xaml
     /// </summary>
-    public partial class All : UserControl
+    public partial class SelectedGroup : UserControl
     {
-        public All()
+        public SelectedGroup()
         {
             InitializeComponent();
         }
-        internal ViewModels.FacilityViewModel Model => ((ViewModels.FacilityViewModel)DataContext);
+        internal ViewModels.FacilityReportViewModel Model => ((ViewModels.FacilityReportViewModel)DataContext);
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Model.Remove();
+
         }
 
         private void Selected(object sender, RoutedEventArgs e)
@@ -42,11 +42,22 @@ namespace ForestPropertyManagement.Views.Facility
         }
     }
 
-    public class Index : BaseView<All>
+    public class SelectedGroupIndex : BaseView<SelectedGroup>
     {
+        int CategoryId;
+        int Month;
+        int Year;
+        public SelectedGroupIndex(int Id, int month, int year)
+        {
+            CategoryId = Id; Month = month; Year = year;
+        }
         protected override void RenderCore()
         {
-            var model = new ViewModels.FacilityViewModel();
+            var model = new ViewModels.FacilityReportViewModel
+            { 
+                SelectedGroupId = CategoryId <= 0 ? 1 : CategoryId,
+                Month = Month, Year = Year
+            };
             Action bind = () => {
                 MainContent.DataContext = null;
                 MainContent.DataContext = model;
