@@ -58,24 +58,26 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\FacilityAddressController.cs" />
     <Compile Include="Controllers\FacilityController.cs" />
-    <Compile Include="Controllers\FacilityReportController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductReportController.cs" />
+    <Compile Include="Models\Base\AJoinB.cs" />
     <Compile Include="Models\Base\Description.cs" />
     <Compile Include="Models\Base\Report.cs" />
     <Compile Include="Models\BusinessStructure.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryFacility.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\FacilityAddress.cs" />
-    <Compile Include="Models\FacilityReport.cs" />
+    <Compile Include="Models\FacilityProduct.cs" />
     <Compile Include="Models\Offering.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProductionMethod.cs" />
     <Compile Include="Models\ProductReport.cs" />
     <Compile Include="ViewModels\Base.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\FacilityAddressViewModel.cs" />
-    <Compile Include="ViewModels\FacilityReportViewModel.cs" />
     <Compile Include="ViewModels\FacilityViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\Category\All.xaml.cs">
       <DependentUpon>All.xaml</DependentUpon>
@@ -86,16 +88,22 @@
     <Compile Include="Views\FacilityAddress\SelectedGroup.xaml.cs">
       <DependentUpon>SelectedGroup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\FacilityReport\SelectedGroup.xaml.cs">
-      <DependentUpon>SelectedGroup.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Facility\All.xaml.cs">
       <DependentUpon>All.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Facility\SelectedGroup.xaml.cs">
-      <DependentUpon>SelectedGroup.xaml</DependentUpon>
+    <Compile Include="Views\Facility\Detail.xaml.cs">
+      <DependentUpon>Detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Facility\GroupByCategory.xaml.cs">
+      <DependentUpon>GroupByCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Facility\RecentDate.xaml.cs">
+      <DependentUpon>RecentDate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainContent.cs" />
+    <Compile Include="Views\Product\GroupByFacility.xaml.cs">
+      <DependentUpon>GroupByFacility.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,15 +128,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\FacilityReport\SelectedGroup.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Facility\All.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Facility\SelectedGroup.xaml">
+    <Page Include="Views\Facility\Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Facility\GroupByCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Facility\RecentDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Product\GroupByFacility.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

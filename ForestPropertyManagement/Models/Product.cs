@@ -9,5 +9,6 @@ namespace Models
 {
     internal class Product : Description<Category>
     {
+        public int CategoryId { get; set; }
     }
 }

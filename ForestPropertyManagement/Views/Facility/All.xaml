@@ -9,11 +9,11 @@
 
     <Grid>
         <StackPanel>
-            <Label x:Name="title">Danh sach co so san xuat
+            <Label x:Name="title">Danh sách cơ sở
             </Label>
 
             <StackPanel Orientation="Horizontal">
-                <Button Click="Button_Click">Test</Button>
+                <Button Margin="2" Padding="10 5" Click="Button_Click">Test</Button>
             </StackPanel>
             <ListView x:Name="ListView" ItemsSource="{Binding Path=List}"
                       SelectionMode="Single"

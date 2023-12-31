@@ -17,7 +17,6 @@ namespace ForestPropertyManagement.Views
     public class BaseView<TView> : ContentView
         where TView : UIElement, new()
     {
-
         public TView MainContent { get; set; }
         public override object GetContent()
         {

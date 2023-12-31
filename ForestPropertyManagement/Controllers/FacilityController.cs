@@ -12,9 +12,13 @@ namespace ForestPropertyManagement.Controllers
         {
             return View();
         }
-        public object SelectedGroupIndex(int CategoryId)
+        public object GroupByCategoryIndex(int CategoryId)
         {
             return View(CategoryId);
+        }
+        public object RecentDateIndex(int CategoryId, DateTime startDate, DateTime stopDate)
+        {
+            return View(CategoryId, startDate, stopDate);
         }
     }
 }

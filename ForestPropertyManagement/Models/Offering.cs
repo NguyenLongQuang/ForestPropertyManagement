@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Offering
+    internal class Offering : Base.AJoinB
     {
-        public int FacilityId { get; set; }
-        public int CategoryId { get; set; }
-
     }
 }

@@ -38,9 +38,13 @@ E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Categ
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Category\All.baml
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\All.g.cs
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\All.baml
-E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\SelectedGroup.g.cs
-E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\SelectedGroup.baml
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\SelectedGroup.g.cs
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityAddress\SelectedGroup.baml
-E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityReport\SelectedGroup.g.cs
-E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\FacilityReport\SelectedGroup.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\GroupByCategory.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\GroupByCategory.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\RecentDate.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\RecentDate.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\Detail.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\Detail.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\GroupByFacility.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\GroupByFacility.baml

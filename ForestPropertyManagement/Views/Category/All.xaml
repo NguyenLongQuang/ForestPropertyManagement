@@ -9,13 +9,15 @@
 
     <Grid>
         <StackPanel>
-            <Label x:Name="title">Danh muc
+            <Label x:Name="title">Danh mục
             </Label>
 
             <StackPanel Orientation="Horizontal">
-                <Button Click="FacilityStats_Click">Thống kê cơ sở</Button>
-                <Button Click="FacilityMap_Click">Xem bản đồ cơ sở</Button>
-                <Button Click="FacilityReportMonth_Click">Thống kê cơ sở theo tháng</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityStats_Click">Tra cứu</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityMap_Click">Xem bản đồ</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityReportMonth_Click">Thống kê theo tháng</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityReportQuarter_Click">Thống kê theo quý</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityReportYear_Click">Thống kê theo năm</Button>
             </StackPanel>
             <ListView x:Name="ListView" ItemsSource="{Binding Path=List}"
                       SelectionMode="Single"

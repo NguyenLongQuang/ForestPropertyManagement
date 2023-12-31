@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ForestPropertyManagement"
         mc:Ignorable="d"
-        Title="Quan ly CSDL tai nguyen rung" Height="450" Width="800">
+        Title="Quản lý CSDL tài nguyên rừng" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#f80" />
@@ -35,8 +35,8 @@
                         Margin="5"
                         >
 
-                <Button x:Name="Facility" Margin="2" Padding="10 5">Co so san xuat</Button>
-                <Button x:Name="Category" Margin="2" Padding="10 5">Danh muc san xuat</Button>
+                <Button x:Name="Facility" Margin="2" Padding="10 5">Cơ sở</Button>
+                <Button x:Name="Category" Margin="2" Padding="10 5">Danh mục</Button>
             </StackPanel>
         </Grid>
         <Border x:Name="MainContent" Grid.Row="1">

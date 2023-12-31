@@ -28,7 +28,7 @@ namespace ForestPropertyManagement.Views.Category
         private void FacilityStats_Click(object sender, RoutedEventArgs e)
         {
             if (Model.SelectedIndex >= 0)
-                MVC.Execute("Facility/SelectedGroupIndex", Model.List[Model.SelectedIndex].Id);
+                MVC.Execute("Facility/GroupByCategoryIndex", Model.List[Model.SelectedIndex].Id);
         }
         private void FacilityMap_Click(object sender, RoutedEventArgs e)
         {
@@ -38,24 +38,18 @@ namespace ForestPropertyManagement.Views.Category
         private void FacilityReportMonth_Click(object sender, RoutedEventArgs e)
         {
             if (Model.SelectedIndex >= 0)
-                MVC.Execute("FacilityReport/SelectedGroupIndex", Model.List[Model.SelectedIndex].Id, 10, 2022);
+                MVC.Execute("Facility/RecentDateIndex", Model.List[Model.SelectedIndex].Id, new DateTime(2023, 12, 1), new DateTime(2023, 12, 31));
         }
-        //private void FacilityReportQuarter_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (Model.SelectedIndex >= 0)
-        //    {
-        //        ViewModels.FacilityReportViewModel.SelectedGroupId = Model.List[Model.SelectedIndex].Id;
-        //        MVC.Execute("FacilityAddress/SelectedGroupIndex");
-        //    }
-        //}
-        //private void FacilityReportYear_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (Model.SelectedIndex >= 0)
-        //    {
-        //        ViewModels.FacilityReportViewModel.SelectedGroupId = Model.List[Model.SelectedIndex].Id;
-        //        MVC.Execute("FacilityAddress/SelectedGroupIndex");
-        //    }
-        //}
+        private void FacilityReportQuarter_Click(object sender, RoutedEventArgs e)
+        {
+            if (Model.SelectedIndex >= 0)
+                MVC.Execute("Facility/RecentDateIndex", Model.List[Model.SelectedIndex].Id, new DateTime(2023, 10, 1), new DateTime(2023, 12, 31));
+        }
+        private void FacilityReportYear_Click(object sender, RoutedEventArgs e)
+        {
+            if (Model.SelectedIndex >= 0)
+                MVC.Execute("Facility/RecentDateIndex", Model.List[Model.SelectedIndex].Id, new DateTime(2023, 1, 1), new DateTime(2023, 12, 31));
+        }
         private void Selected(object sender, RoutedEventArgs e)
         {
             if (Model != null)

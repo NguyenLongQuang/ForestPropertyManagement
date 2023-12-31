@@ -4,7 +4,9 @@ FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\MainWindow.xaml;;
 FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Category\All.xaml;;
 FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\FacilityAddress\All.xaml;;
 FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\FacilityAddress\SelectedGroup.xaml;;
-FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\FacilityReport\SelectedGroup.xaml;;
 FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Facility\All.xaml;;
-FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Facility\SelectedGroup.xaml;;
+FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Facility\Detail.xaml;;
+FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Facility\GroupByCategory.xaml;;
+FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Facility\RecentDate.xaml;;
+FE:\LEARN\ForestPropertyManagement\ForestPropertyManagement\Views\Product\GroupByFacility.xaml;;
 

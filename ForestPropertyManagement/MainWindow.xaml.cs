@@ -26,8 +26,10 @@ namespace ForestPropertyManagement
         {
             InitializeComponent();
 
+            ContentView view = new ContentView();
+
             MVC.Register(this, result => {
-                var view = (ContentView)result.View;
+                view = (ContentView)result.View;
 
                 MainContent.Child = (UIElement)view.GetContent();
                 if (view.Title != null)
@@ -41,11 +43,11 @@ namespace ForestPropertyManagement
                 btn.Click += (s, e) =>
                 {
                     MVC.Execute(btn.Name);
-                    //var view = new MainContent(btn.Name + ".All");
-                    //MainContent.Child = view;
-                    //if (view.Caption != null) {
-                    //    MainCaption.Content = view.Caption;
-                    //}
+
+                    if (view.Title != null)
+                    {
+                        MainCaption.Content = view.Title;
+                    }
 
                 };
             }

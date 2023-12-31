@@ -28,11 +28,13 @@ namespace ForestPropertyManagement.Views.FacilityAddress
         }
         internal ViewModels.FacilityAddressViewModel Model => ((ViewModels.FacilityAddressViewModel)DataContext);
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Return_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Model != null)
+            {
+                MVC.Execute("Category");
+            }
         }
-
         private void Selected(object sender, RoutedEventArgs e)
         {
             if (Model != null)

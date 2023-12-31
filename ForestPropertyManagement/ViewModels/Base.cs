@@ -10,8 +10,8 @@ namespace ForestPropertyManagement.ViewModels
 
     internal class Base<T> where T : new()
     {
-        List<T> all;
-        public List<T> List
+        protected List<T> all;
+        public virtual List<T> List
         {
             get
             {
@@ -26,8 +26,8 @@ namespace ForestPropertyManagement.ViewModels
         public T Selected { get; set; }
         public int SelectedIndex
         {
-            get => all == null ? -1 : all.IndexOf(Selected);
-            set => Selected = all == null ? new T() : all[value];
+            get => all.IndexOf(Selected);
+            set => Selected = all[value];
         }
 
         public event EventHandler OnChanged;

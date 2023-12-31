@@ -9,19 +9,5 @@ namespace ForestPropertyManagement.ViewModels
 {
     internal class CategoryViewModel : Base<Category>
     {
-        //public List<Category> CurrentCategory
-        //{ 
-        //    get 
-        //    {
-        //        var tmp = new Provider().Select<Category>("SELECT * FROM " + typeof(Product).Name);
-                
-        //    } 
-        //}
-
-        //public void ViewProduct()
-        //{
-        //    Selected;
-        //    RaiseOnChanged();
-        //}
     }
 }

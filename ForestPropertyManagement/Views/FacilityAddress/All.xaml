@@ -9,7 +9,7 @@
 
     <Grid>
         <StackPanel>
-            <Label x:Name="title">Ban do co so san xuat
+            <Label x:Name="title">Bản đồ
             </Label>
 
             <StackPanel Orientation="Horizontal">

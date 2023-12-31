@@ -15,22 +15,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ForestPropertyManagement.Views.FacilityReport
+namespace ForestPropertyManagement.Views.Facility
 {
     /// <summary>
     /// Interaction logic for All.xaml
     /// </summary>
-    public partial class SelectedGroup : UserControl
+    public partial class RecentDate : UserControl
     {
-        public SelectedGroup()
+        public RecentDate()
         {
             InitializeComponent();
         }
-        internal ViewModels.FacilityReportViewModel Model => ((ViewModels.FacilityReportViewModel)DataContext);
+        internal ViewModels.FacilityViewModel Model => ((ViewModels.FacilityViewModel)DataContext);
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Return_Click(object sender, RoutedEventArgs e)
         {
-
+            if(Model != null)
+            {
+                MVC.Execute("Category");
+            }
         }
 
         private void Selected(object sender, RoutedEventArgs e)
@@ -42,22 +45,15 @@ namespace ForestPropertyManagement.Views.FacilityReport
         }
     }
 
-    public class SelectedGroupIndex : BaseView<SelectedGroup>
+    public class RecentDateIndex : BaseView<RecentDate>
     {
         int CategoryId;
-        int Month;
-        int Year;
-        public SelectedGroupIndex(int Id, int month, int year)
-        {
-            CategoryId = Id; Month = month; Year = year;
-        }
+        DateTime StartDate;
+        DateTime StopDate;
+        public RecentDateIndex(int Id, DateTime startDate, DateTime stopDate) { CategoryId = Id; StartDate = startDate; StopDate = stopDate; }
         protected override void RenderCore()
         {
-            var model = new ViewModels.FacilityReportViewModel
-            { 
-                SelectedGroupId = CategoryId <= 0 ? 1 : CategoryId,
-                Month = Month, Year = Year
-            };
+            var model = new ViewModels.FacilityViewModel { GroupCategoryId = CategoryId <= 0 ? 1 : CategoryId, StartDate = StartDate, StopDate = StopDate };
             Action bind = () => {
                 MainContent.DataContext = null;
                 MainContent.DataContext = model;
@@ -67,4 +63,6 @@ namespace ForestPropertyManagement.Views.FacilityReport
             bind();
         }
     }
+
+
 }

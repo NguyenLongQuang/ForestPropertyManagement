@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ForestPropertyManagement.Views.Facility.SelectedGroup"
+﻿<UserControl x:Class="ForestPropertyManagement.Views.Facility.GroupByCategory"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,13 +9,16 @@
 
     <Grid>
         <StackPanel>
-            <Label x:Name="title">Danh sach co so san xuat
+            <Label x:Name="title">Danh sách cơ sở
             </Label>
+            <TextBox Margin="2" Padding="10 5" x:Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged"/>
 
             <StackPanel Orientation="Horizontal">
-                <Button Click="Button_Click">Test</Button>
+                <Button Margin="2" Padding="10 5" Click="Return_Click">Quay lại</Button>
+                <Button Margin="2" Padding="10 5" Click="Detail_Click">Chi tiết</Button>
+                <Button Margin="2" Padding="10 5" Click="ProductStats_Click">Danh mục sản phẩm</Button>
             </StackPanel>
-            <ListView x:Name="ListView" ItemsSource="{Binding Path=SelectedGroupList}"
+            <ListView x:Name="ListView" ItemsSource="{Binding Path=List}"
                       SelectionMode="Single"
                       SelectionChanged="Selected">
                 <ListView.ItemTemplate>
@@ -24,6 +27,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
         </StackPanel>
     </Grid>
 </UserControl>

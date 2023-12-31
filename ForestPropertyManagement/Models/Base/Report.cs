@@ -11,14 +11,6 @@ namespace Models.Base
         public int Id { get; set; }
         public int ReferenceId { get; set; }
         public int Number { get; set; }
-        public int RecordMonth { get; set; }
-        public int RecordYear { get; set; }
-        public string Date
-        {
-            get
-            {
-                return $"{RecordMonth}/{RecordYear}";
-            }
-        }
+        public DateTime RecordDate { get; set; }
     }
 }
