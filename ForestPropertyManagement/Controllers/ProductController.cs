@@ -12,9 +12,17 @@ namespace ForestPropertyManagement.Controllers
         {
             return View();
         }
+        public object Index(int a)
+        {
+            return View(a);
+        }
         public object GroupByFacilityIndex(int FacilityId, int CategoryId)
         {
             return View(FacilityId, CategoryId);
+        }
+        public object GroupByCategoryIndex(int CategoryId)
+        {
+            return View(CategoryId);
         }
     }
 }

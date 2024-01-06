@@ -9,8 +9,8 @@ namespace ForestPropertyManagement.ViewModels
 {
     internal class ProductViewModel : Base<Product>
     {
-        int FacilityId;
-        int CategoryId;
+        int FacilityId = -1;
+        int CategoryId = -1;
         public int GroupFacilityId
         {
             get => FacilityId;
@@ -44,9 +44,19 @@ namespace ForestPropertyManagement.ViewModels
                     }
                     return all;
                 }
-                else if (all == null && (GroupFacilityId <= 0 || GroupCategoryId <= 0))
+                else if (all == null && GroupFacilityId <= 0 && GroupCategoryId > 0)
+                {
+                    List<Product> tmp = new Base<Product>().List;
+                    all = new List<Product>();
+                    foreach (var product in tmp)
+                    {
+                        if (product.CategoryId == GroupCategoryId)
+                            all.Add(product);
+                    }
+                    return all;
+                }
+                else if (all == null && GroupFacilityId <= 0 && GroupCategoryId <= 0)
                     return base.List;
-
                 return all;
 
             }

@@ -77,7 +77,9 @@
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\FacilityAddressViewModel.cs" />
     <Compile Include="ViewModels\FacilityViewModel.cs" />
+    <Compile Include="ViewModels\OfferingViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\ProductReportViewModel.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\Category\All.xaml.cs">
       <DependentUpon>All.xaml</DependentUpon>
@@ -87,6 +89,9 @@
     </Compile>
     <Compile Include="Views\FacilityAddress\SelectedGroup.xaml.cs">
       <DependentUpon>SelectedGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Facility\AddFacility.xaml.cs">
+      <DependentUpon>AddFacility.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Facility\All.xaml.cs">
       <DependentUpon>All.xaml</DependentUpon>
@@ -101,6 +106,15 @@
       <DependentUpon>RecentDate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainContent.cs" />
+    <Compile Include="Views\ProductReport\GroupByProduct.xaml.cs">
+      <DependentUpon>GroupByProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product\Detail.xaml.cs">
+      <DependentUpon>Detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product\GroupByCategory.xaml.cs">
+      <DependentUpon>GroupByCategory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Product\GroupByFacility.xaml.cs">
       <DependentUpon>GroupByFacility.xaml</DependentUpon>
     </Compile>
@@ -128,6 +142,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Facility\AddFacility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Facility\All.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +159,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Facility\RecentDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductReport\GroupByProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Product\Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Product\GroupByCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

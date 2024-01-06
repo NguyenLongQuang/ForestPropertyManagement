@@ -40,11 +40,11 @@ namespace ForestPropertyManagement.Views.Product
         {
             string searchText = SearchTextBox.Text.ToLower();
 
-            var filteredItems = Model.List
+             Model.filteredItems = Model.List
                 .Where(item => item.FormerName.ToLower().Contains(searchText))
                 .ToList();
 
-            ListView.ItemsSource = filteredItems;
+            ListView.ItemsSource = Model.filteredItems;
         }
 
         private void Selected(object sender, RoutedEventArgs e)

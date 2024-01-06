@@ -10,5 +10,12 @@ namespace Models
 {
     internal class ProductReport : Report<Product>
     {
+        public string RecordDateDDMMYY
+        {
+            get
+            {
+                return $"{RecordDate.Day}/{RecordDate.Month}/{RecordDate.Year}";
+            }
+        }
     }
 }

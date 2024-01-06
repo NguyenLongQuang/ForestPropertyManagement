@@ -60,6 +60,45 @@ namespace Models
             return table;
         }
 
+        public bool Execute(string sql)
+        {
+            var cmd = new SqlCommand(sql, Open());
+
+            var affectedRows = cmd.ExecuteNonQuery();
+
+            Close();
+            return affectedRows > 0;
+        }
+
+        public bool Add(string table, params object[] values)
+        {
+            // Construct the SQL query
+            string columns = string.Join(", ", values.Select(v => $"'{v}'"));
+            string sql = $"INSERT INTO {table} VALUES ({columns})";
+
+            var cmd = new SqlCommand(sql, Open());
+
+            // Execute the query
+            int affectedRows = cmd.ExecuteNonQuery();
+            Close();
+            return affectedRows > 0;
+        }
+
+        public bool AddIncrement<T>(T entity) where T : new()
+        {
+            var props = typeof(T).GetProperties();
+            var nonIdentityProps = props.Skip(1).ToList();
+            object[] values = nonIdentityProps.Select(prop => prop.GetValue(entity)).ToArray();
+            return Add(typeof(T).Name, values);
+        }
+
+        public bool Add<T>(T entity) where T : new()
+        {
+            var props = typeof(T).GetProperties();
+            object[] values = props.Select(prop => prop.GetValue(entity)).ToArray();
+            return Add(typeof(T).Name, values);
+        }
+
         public List<T> Select<T>(string sql) where T : new()
         {
             var lst = new List<T>();

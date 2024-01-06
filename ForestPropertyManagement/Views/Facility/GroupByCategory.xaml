@@ -17,6 +17,7 @@
                 <Button Margin="2" Padding="10 5" Click="Return_Click">Quay lại</Button>
                 <Button Margin="2" Padding="10 5" Click="Detail_Click">Chi tiết</Button>
                 <Button Margin="2" Padding="10 5" Click="ProductStats_Click">Danh mục sản phẩm</Button>
+                <Button Margin="2" Padding="10 5" Click="AddNewFacility_Click">Thêm cơ sở</Button>
             </StackPanel>
             <ListView x:Name="ListView" ItemsSource="{Binding Path=List}"
                       SelectionMode="Single"

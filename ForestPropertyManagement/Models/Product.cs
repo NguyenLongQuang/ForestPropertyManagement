@@ -10,5 +10,9 @@ namespace Models
     internal class Product : Description<Category>
     {
         public int CategoryId { get; set; }
+        public Category GetCategory()
+        {
+            return new Provider().Select<Category>($"SELECT * FROM {typeof(Category).Name} WHERE Id = {CategoryId}")[0];
+        }
     }
 }

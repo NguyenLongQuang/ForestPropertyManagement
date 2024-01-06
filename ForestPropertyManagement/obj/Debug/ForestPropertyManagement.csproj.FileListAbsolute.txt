@@ -48,3 +48,11 @@ E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facil
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\Detail.baml
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\GroupByFacility.g.cs
 E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\GroupByFacility.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\GroupByCategory.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\GroupByCategory.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\Detail.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Product\Detail.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\AddFacility.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\Facility\AddFacility.baml
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\ProductReport\GroupByProduct.g.cs
+E:\LEARN\ForestPropertyManagement\ForestPropertyManagement\obj\Debug\Views\ProductReport\GroupByProduct.baml

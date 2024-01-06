@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Facility
+    public class Facility
     {
         public int Id { get; set; }
         public string FormerName { get; set; }
@@ -15,8 +15,8 @@ namespace Models
         public DateTime DissolvedDate { get; set; }
         public int DistrictId { get; set; }
         public int BusinessStructureId { get; set; }
-
-        public List<Description<Facility>> GetFullDetail => new List<Description<Facility>> { new Provider().Select<Description<Facility>>($"SELECT * FROM District where Id={DistrictId}")[0],
+        public bool IsValid() { if ( FormerName == null || EstablishedDate == null || DissolvedDate == null || DistrictId <= 0 || BusinessStructureId <= 0) return false; return true; }
+        public List<Description<Facility>> GetFullDetail() => new List<Description<Facility>> { new Provider().Select<Description<Facility>>($"SELECT * FROM District where Id={DistrictId}")[0],
                                                                                               new Provider().Select<Description<Facility>>($"SELECT * FROM BusinessStructure where Id={BusinessStructureId}")[0] };
     }
     internal class FacilityList : List<Facility>

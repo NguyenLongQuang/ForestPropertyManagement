@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Models;
 
 namespace ForestPropertyManagement.Controllers
 {
@@ -20,5 +21,10 @@ namespace ForestPropertyManagement.Controllers
         {
             return View(CategoryId, startDate, stopDate);
         }
+        //public object AddIncrement(Facility facility)
+        //{
+        //    new Provider().AddIncrement<Facility>(facility);
+        //    return new ActionResult();
+        //}
     }
 }

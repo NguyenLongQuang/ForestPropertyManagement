@@ -13,8 +13,9 @@
             </Label>
 
             <StackPanel Orientation="Horizontal">
-                <Button Margin="2" Padding="10 5" Click="FacilityStats_Click">Tra cứu</Button>
-                <Button Margin="2" Padding="10 5" Click="FacilityMap_Click">Xem bản đồ</Button>
+                <Button Margin="2" Padding="10 5" Click="ProductStats_Click">Quản lý sản phẩm</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityStats_Click">Quản lý cơ sở</Button>
+                <Button Margin="2" Padding="10 5" Click="FacilityMap_Click">Xem bản đồ cơ sở</Button>
                 <Button Margin="2" Padding="10 5" Click="FacilityReportMonth_Click">Thống kê theo tháng</Button>
                 <Button Margin="2" Padding="10 5" Click="FacilityReportQuarter_Click">Thống kê theo quý</Button>
                 <Button Margin="2" Padding="10 5" Click="FacilityReportYear_Click">Thống kê theo năm</Button>

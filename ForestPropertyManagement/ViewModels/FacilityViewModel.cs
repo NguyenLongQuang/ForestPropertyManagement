@@ -11,6 +11,7 @@ namespace ForestPropertyManagement.ViewModels
 {
     internal class FacilityViewModel : Base<Facility>
     {
+    
         int CategoryId;
         public DateTime StartDate;
         public DateTime StopDate;

@@ -1,0 +1,47 @@
+﻿<Window x:Class="ForestPropertyManagement.Views.Facility.AddFacility"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForestPropertyManagement.Views.Facility"
+        mc:Ignorable="d"
+        Title="Điền thông tin cơ sở mới" Height="450" Width="450">
+    <Grid>
+        <StackPanel>
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <TextBlock Margin="0" Text="Tên cơ sở: " FontWeight="Bold"/>
+                <TextBox Margin="0" Padding= "60 5" x:Name="InputFormerName"/>
+            </StackPanel>
+
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <TextBlock Margin="0" Text="Địa chỉ: " FontWeight="Bold"/>
+                <ComboBox Margin="0" x:Name="DistrictComboBox" HorizontalAlignment="Left" VerticalAlignment="Top">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <TextBlock Margin="0" Text="Hình thức hoạt động: " FontWeight="Bold"/>
+                <ComboBox Margin="0" x:Name="BusinessStructureComboBox" HorizontalAlignment="Left" VerticalAlignment="Top">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="0" Orientation="Horizontal">
+                <TextBlock Margin="0" Text="Ngày thành lập: " FontWeight="Bold"/>
+                <DatePicker Margin="0" x:Name="EstablishedDatePicker" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel x:Name="productStackPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+
+            <Button Content="Thêm sản phẩm" Click="AddProduct_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+            <Popup x:Name="productPopup">
+                    <StackPanel Margin="0" Orientation="Horizontal">
+ 
+    
+                    </StackPanel>
+            </Popup>
+
+            <Button Content="Lưu thông tin" Click="AddFacility_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </StackPanel>
+    </Grid>
+</Window>

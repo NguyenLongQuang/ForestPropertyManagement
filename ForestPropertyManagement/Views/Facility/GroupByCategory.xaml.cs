@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
+using Models;
+using System.Security.Cryptography;
 
 namespace ForestPropertyManagement.Views.Facility
 {
@@ -32,9 +35,9 @@ namespace ForestPropertyManagement.Views.Facility
         private void Detail_Click(object sender, RoutedEventArgs e)
         {
             if (Model.SelectedIndex >= 0){
-                string selectedFormerName = Model.List[Model.SelectedIndex].FormerName;
-                string selectedInfo = $"Địa chỉ: {Model.List[Model.SelectedIndex].GetFullDetail[0].FormerName}\n" +
-                    $"Hình thức hoạt động: {Model.List[Model.SelectedIndex].GetFullDetail[1].FormerName}\n";
+                string selectedFormerName = Model.Selected.FormerName;
+                string selectedInfo = $"Địa chỉ: {Model.Selected.GetFullDetail()[0].FormerName}\n" +
+                    $"Hình thức hoạt động: {Model.Selected.GetFullDetail()[1].FormerName}\n";
 
                 Detail detailView = new Detail(selectedFormerName, selectedInfo);
                 detailView.Show();
@@ -50,27 +53,49 @@ namespace ForestPropertyManagement.Views.Facility
         private void ProductStats_Click(object sender, RoutedEventArgs e)
         {
             if (Model.SelectedIndex >= 0){
-                MVC.Execute("Product/GroupByFacilityIndex", Model.List[Model.SelectedIndex].Id, Model.GroupCategoryId);
+                MVC.Execute("Product/GroupByFacilityIndex", Model.Selected.Id, Model.GroupCategoryId);
             }
         }
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchText = SearchTextBox.Text.ToLower();
-            var filteredItems = Model.List
+            Model.filteredItems = Model.List
                 .Where(item => item.FormerName.ToLower().Contains(searchText))
                 .ToList();
-
-            ListView.ItemsSource = filteredItems;
+        
+            ListView.ItemsSource = Model.filteredItems;
         }
 
         private void Selected(object sender, RoutedEventArgs e)
         {
             if (Model != null)
             {
-
                 Model.SelectedIndex = ListView.SelectedIndex;
             }
         }
+
+        private void AddNewFacility_Click(object sender, RoutedEventArgs e)
+        {
+            if (Model != null)
+            {          
+                AddFacility addFacility = new AddFacility(Model.GroupCategoryId);
+                addFacility.ShowDialog();
+
+                if (addFacility.GetNewItem().IsValid())
+                {
+                    Model.AddIncrement(addFacility.GetNewItem());
+
+                    int aId = new FacilityList().Find(item => item.FormerName == addFacility.GetNewItem().FormerName).Id;
+
+                    var offer = new ViewModels.OfferingViewModel();
+                    foreach (var p in addFacility.fProductList)
+                    {
+                        offer.Add( new Offering { AId = aId, BId = p.Id});
+                    }
+                }
+            }
+        }
+
     }
 
     public class GroupByCategoryIndex : BaseView<GroupByCategory>
@@ -83,7 +108,6 @@ namespace ForestPropertyManagement.Views.Facility
             Action bind = () => {
                 MainContent.DataContext = null;
                 MainContent.DataContext = model;
-                MainContent.title.Content = new ViewModels.CategoryViewModel().List[CategoryId].FormerName;
             };
 
             model.OnChanged += (s, e) => bind();

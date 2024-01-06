@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Models;
 
 namespace ForestPropertyManagement.Views.Facility
 {
@@ -30,7 +31,7 @@ namespace ForestPropertyManagement.Views.Facility
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Model.Remove();
+            return;
         }
 
         private void Selected(object sender, RoutedEventArgs e)

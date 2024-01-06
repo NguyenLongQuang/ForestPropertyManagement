@@ -17,7 +17,6 @@ namespace System
     {
         public string Controller { get; set; }
         public string Action { get; set; } = "Index";
-
         public List<object> Params { get; set; } = new List<object>();
     }
 
@@ -94,6 +93,7 @@ namespace System
             var view = MVC.GetView(Request.Controller, Request.Action, parameters);
             return new ActionResult { View = view };
         }
+
     }
 }
 

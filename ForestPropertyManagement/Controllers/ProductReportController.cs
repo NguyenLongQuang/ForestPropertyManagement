@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ForestPropertyManagement.Controllers
 {
-    internal class ProductReportController
+    internal class ProductReportController : ControllerBase
     {
+        public object GroupByProductIndex(int productId)
+        {
+            return View(productId);
+        }
     }
 }
